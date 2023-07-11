@@ -129,8 +129,8 @@ function primerRonda(jugador) {
 function paridad(jugador) {
     let paridad = 0
     do {
-        paridad = parseInt(prompt(`${jugador} debe elegir una paridad \nIngrese 1 = par \nIngrese 2 = impar`))
-    } while (paridad != 1 && paridad != 2)
+        paridad = prompt(`${jugador} debe elegir una paridad \nIngrese 1 = par \nIngrese 2 = impar`)
+    } while (paridad !== "1" && paridad !== "2")
 
     return paridad
 }
