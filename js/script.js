@@ -6,6 +6,8 @@ Segunda ronda: El jugador elige par o impar y se generan 3 dados nuevamente. Si 
 
 Validar nombres ingresados (que no tengan números ni caracteres especiales). Ir mostrando por consola o por pantalla los dados generados y qué va pasando a lo largo del programa de forma ordenada. Validar números ingresados para la paridad (1 es par y 2 es impar). Finalmente mostrar puntos obtenidos por cada jugador y el ganador.*/
 
+"use strict"
+
 console.log(`El siguiente juego es para 2 jugadores y consiste en 2 rondas.\n
 ======================================================================\n
 PRIMER RONDA\n
