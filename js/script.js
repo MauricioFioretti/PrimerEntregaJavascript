@@ -22,7 +22,7 @@ Si el jugador eligió la misma paridad que la paridad de la suma de los 3 dados,
 Si elige distinta paridad que la suma de los 3 dados, no suma puntos.\n
 Además, si la paridad que eligió es igual a la paridad de cada uno de los dados, se multiplica por 2 la cantidad de puntos que tiene hasta el momento.\n`)
 
-alert(`Las reglas del juego se encuentran por consola, presiona la tecla F12.`)
+alert(`Las reglas del juego se encuentran por consola, presiona la tecla F12 para acceder.`)
 
 //===============================================Variables====================================================================
 let jugador1 = compruebaNombre(1)
