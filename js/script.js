@@ -20,7 +20,7 @@ Si el jugador eligió la misma paridad que la paridad de la suma de los 3 dados,
 Si elige distinta paridad que la suma de los 3 dados, no suma puntos.\n
 Además, si la paridad que eligió es igual a la paridad de cada uno de los dados, se multiplica por 2 la cantidad de puntos que tiene hasta el momento.\n`)
 
-alert(`Las reglas del juego se encuentran por consola!`)
+alert(`Las reglas del juego se encuentran por consola, presiona la tecla F12.`)
 
 //===============================================Variables====================================================================
 let jugador1 = compruebaNombre(1)
@@ -146,8 +146,13 @@ function segundaRonda(jugador, paridad, puntaje) {
 
     if (paridadDados == 0 && paridad == 1 || paridadDados == 1 && paridad == 2) {
         puntaje += Math.max(dado1, dado2, dado3) //Devuelve el mayor de los numeros que le pasemos
-
-        document.write(`${jugador} eligió la misma paridad que la suma de los dados, por lo que se suma al puntaje el mayor de los dados. Su nuevo puntaje es: ${puntaje} puntos <br>`)
+        
+        if(paridad == 1){
+            document.write(`${jugador} eligió par y la paridad de la suma de los dados también es par, por lo que se suma al puntaje el mayor de los dados. Su nuevo puntaje es: ${puntaje} puntos <br>`)
+        }
+        else{
+            document.write(`${jugador} eligió impar y la paridad de la suma de los dados también es impar, por lo que se suma al puntaje el mayor de los dados. Su nuevo puntaje es: ${puntaje} puntos <br>`)
+        }
 
         if ((paridad == 1 && dado1 % 2 == 0 && dado2 % 2 == 0 && dado3 % 2 == 0) || (paridad == 2 && dado1 % 2 == 1 && dado2 % 2 == 1 && dado3 % 2 == 1)) {
             puntaje *= 2
@@ -156,7 +161,12 @@ function segundaRonda(jugador, paridad, puntaje) {
         }
     }
     else {
-        document.write(`${jugador} eligió una paridad distinta a la suma de los dados, por lo que no suma puntos. El puntaje final es: ${puntaje} puntos<br>`)
+        if(paridad == 1){
+            document.write(`${jugador} eligió par y la paridad de la suma de los dados es impar, por lo que no suma puntos. El puntaje final es: ${puntaje} puntos<br>`)
+        }
+        else{
+            document.write(`${jugador} eligió impar y la paridad de la suma de los dados es par, por lo que no suma puntos. El puntaje final es: ${puntaje} puntos<br>`)
+        }
     }
 
     document.write(`<br>`)
